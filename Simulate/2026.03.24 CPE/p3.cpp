@@ -16,16 +16,11 @@ int main()
 			mp[s]++;
 			sum++;
 		}
-		vector<pair<string, int>> a;
+		cout << fixed << setprecision(4);
 		for (auto it : mp)
 		{
-			a.push_back({it.first, it.second});
-		}
-		cout << fixed << setprecision(4);
-		for (int i = 0; i < a.size(); i++)
-		{
-			double w = (100.0 * a[i].second) / sum;
-			cout << a[i].first << " " << w << '\n';
+			double w = (it.second * 100.0) / sum;
+			cout << it.first << " " << w << '\n';
 		}
 		if (t > 0) cout << '\n';
 	}
