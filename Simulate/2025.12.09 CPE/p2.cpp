@@ -6,7 +6,8 @@ bool cmp(int a, int b)
 	if (a % m != b % m) return (a % m) < (b % m);
 	bool is_odd_a = abs(a % 2) == 1;
 	bool is_odd_b = abs(b % 2) == 1;
-	if (is_odd_a != is_odd_b) return is_odd_a;
+	if (is_odd_a == true and is_odd_b == false) return true;
+	else if (is_odd_a == false and is_odd_b == true) return false;
 	if (is_odd_a and is_odd_b) return a > b;
 	return b > a;
 }
